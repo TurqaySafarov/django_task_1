@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Film</title>
+    <link rel="stylesheet" href="{% static 'movie_reviews/styles.css' %}">
+</head>
+<body>
+    <h1>Filmlər</h1>
+    <ul>
+        {% for movie in movies %}
+            <li>{{ movie.title }} - {{ movie.director }} ({{ movie.year }})</li>
+            <p>{{ movie.description }}</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>
